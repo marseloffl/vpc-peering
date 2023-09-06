@@ -1,9 +1,9 @@
-# VPC Peering : Connecting Two EC2 Instances with VPC Peering Connection.
+# VPC Peering : Connecting Two EC2 Instances Using VPC Peering Connection.
 
 ## Aim:
-* To Create Two EC2 machine with two different VPC Configurations and connecting it together using VPC Peering Connection in AWS Cloud.
+* To Create Two EC2 machine with two different VPC Configurations and connecting it together using VPC Peering in AWS Cloud.
 
-![VPC-Peering-Architecture](https://drive.google.com/uc?export=view&id=1zqcsulGP_Uv3QY8i8iMlYvt9t4nj6AiC)
+![VPC-Peering-Architecture](https://drive.google.com/uc?export=view&id=1zl8u58woqhkB98BIO_sOcs40_IttRkLW)
 
 ## Step 1. Creating VPC
 * We need two VPC, we already have one VPC in ```172.31.0.0/16``` CIDR and  all configurations done in default. So we will take that and you name it as ```default-VPC``` if you need.
@@ -68,4 +68,11 @@ sudo hostnamectl set-hostname Ubuntu1
 * After All Demonstration Delete your VPC Peering and other stuffs which your created newly and be careful don't delete the default VPC Configurations.
 
 ## FAQ
-### 1. 
+### 1. Is VPC Peering Service is free ?
+Yes but only if the Availabilty Zone is same. If different AZ then AWS gonna charge you.
+
+### 2. What are the Chances of Error ?
+The important things you should be careful while setting Route Table Configuration and Security group. Subnet must be associated with Route table where the EC2 instance was launched.
+
+### 3. Can we connect different AWS Account in VPC Peering ?
+Yes, account number/id is required while configuring and the person from other side must accept the peering connection.
